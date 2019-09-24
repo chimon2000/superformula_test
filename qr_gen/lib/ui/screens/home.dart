@@ -25,13 +25,6 @@ class HomeScreen extends StatelessWidget {
       animatedIconTheme: IconThemeData(size: 22.0),
       children: [
         SpeedDialChild(
-          child: Icon(Icons.camera, color: Colors.white),
-          backgroundColor: Colors.deepOrange,
-          onTap: () => _handleScan(context),
-          label: "Scan",
-          labelStyle: TextStyle(fontWeight: FontWeight.w500, color: Colors.red),
-        ),
-        SpeedDialChild(
           child: Icon(Icons.details, color: Colors.white),
           backgroundColor: Colors.green,
           onTap: () => _handleGenerate(context),
@@ -39,6 +32,13 @@ class HomeScreen extends StatelessWidget {
           labelStyle: TextStyle(fontWeight: FontWeight.w500),
           labelBackgroundColor: Colors.greenAccent,
         ),
+        SpeedDialChild(
+          child: Icon(Icons.camera, color: Colors.white),
+          backgroundColor: Colors.deepOrange,
+          onTap: () => _handleScan(context),
+          label: "Scan",
+          labelStyle: TextStyle(fontWeight: FontWeight.w500, color: Colors.red),
+        )
       ],
     );
   }

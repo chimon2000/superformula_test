@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_observable_state/flutter_observable_state.dart';
-import 'package:get_it/get_it.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qr_gen/core/qr.dart';
 
-import '../widgets/expired_panel.dart';
+import 'package:qr_gen/core/locator.dart';
+import 'package:qr_gen/ui/widgets/expired_panel.dart';
 
 class GeneratorScreen extends StatefulWidget {
   @override
@@ -12,8 +12,8 @@ class GeneratorScreen extends StatefulWidget {
 }
 
 class _GeneratorScreenState extends State<GeneratorScreen> {
-  final _state = GetIt.instance.get<QrState>();
-  final _actions = GetIt.instance.get<QrActions>();
+  final _state = sl.get<QrState>();
+  final _actions = sl.get<QrActions>();
 
   @override
   void initState() {
